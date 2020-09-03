@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('long lat error',undefined)
         }
         else{
-            const data = body.current.weather_descriptions[0] + '. its currently ' + body.current.temperature + ' degrees celcius out. There is a ' +body.current.precip+ '% chance of rain.';
+            const data = body.current.weather_descriptions[0] + '. its currently ' + body.current.temperature + ' degrees celcius out. There is a ' +body.current.precip+ '% chance of rain. The wind direction is to ' + body.current.wind_dir;
             callback(undefined, data)
         }
     })
